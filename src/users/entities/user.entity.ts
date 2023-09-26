@@ -18,6 +18,6 @@ export class User {
   @Column()
   gender: Gender;
 
-  @Column({ default: 'visitor' })
+  @Column({ default: 'guest' })
   userRole: Roles;
 }

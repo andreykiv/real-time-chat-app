@@ -14,5 +14,5 @@ export enum Gender {
 export enum Roles {
   admin = 'admin',
   user = 'user',
-  visitor = 'visitor',
+  visitor = 'guest',
 }
