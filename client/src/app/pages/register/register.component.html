@@ -1,0 +1,53 @@
+<div class="container mt-3">
+  <form [formGroup]="form" [ngClass]="{'was-validated': doApplyInvalidFormClass}" class="row mt-3 g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Username</label>
+      <input formControlName="username" type="text" class="form-control" id="validationCustom01" value="" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Please provide a username.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Email</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input formControlName="userEmail" type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please provide an email.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input formControlName="city" type="text" class="form-control" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomAge" class="form-label">Age</label>
+      <div class="input-group has-validation">
+        <input max="99" min="16" formControlName="age" type="number" class="form-control" id="validationCustomAge" aria-describedby="inputGroupPrepend">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Age range should be between 16 and 99.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom04" class="form-label">Gender</label>
+      <select formControlName="gender" class="form-select" id="validationCustom04">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <button (click)="onSubmit()" class="btn btn-primary" type="submit">Join chat</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="container mt-3">
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{active: showLogin}" (click)="handleLogic('Login')">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{active: !showLogin}" (click)="handleLogic('Register')">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/lobby']">Join as a Guest</a>
+    </li>
+  </ul>
+
+  <div class="row">
+    <app-login *ngIf="showLogin; else registerComponent"></app-login>
+    <ng-template #registerComponent>
+      <app-register></app-register>
+    </ng-template>
+  </div>
+
+</div>

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HeaderComponent } from './layout/header/header.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
@@ -15,13 +14,7 @@ registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: LOCALE_ID, useValue: 'es' },

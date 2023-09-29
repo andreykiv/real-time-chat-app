@@ -14,6 +14,7 @@ export class ChatService {
   socket = io(SOCKET_URL);
 
   public sendMessage(message: any) {
+    console.log('before socket emit: ', message);
     this.socket.emit('message', message);
   }
 
